@@ -9,15 +9,15 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest   # iOS build için mutlaka macOS
+    runs-on: macos-latest   # iOS build için macOS gerekiyor
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Set up Xcode
-        uses: maxim-lobanov/setup-xcode@v2
+        uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '14.3'  # Kendi Xcode sürümüne göre değiştir
+          xcode-version: '14.3'  # Xcode sürümünü kendi projenize göre değiştirin
 
       - name: Install CocoaPods
         run: |
