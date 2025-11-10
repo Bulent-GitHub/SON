@@ -21,7 +21,7 @@ jobs:
 
       - name: Build .ipa
         run: |
-          xcodebuild -workspace YourApp.xcworkspace \
+          xcodebuild -project YourApp.xcodeproj \
                      -scheme YourSchemeName \
                      -configuration Release \
                      -sdk iphoneos \
